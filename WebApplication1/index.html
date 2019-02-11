@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Scripts/underscore.js"></script>
+    <script src="app/controllers/demo.js"></script>
+    <!--<script src="app/services/serviceSlike.js"></script>-->
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="Scripts/StyleSheet1.css" />
+</head>
+<body>
+    <tabs>
+        <pane title="Pluralization">
+            <div ng-controller="BeerCounter">
+                <p>{{message}}</p>
+                <div ng-repeat="banner in banners track by $index">
+                    <img ng-if="banner.Visible" ng-src="{{banner.FullImageUrl}}" />
+                </div>
+            </div>
+        </pane>
+    </tabs>
+
+</body>
+</html>
