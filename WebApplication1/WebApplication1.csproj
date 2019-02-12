@@ -90,15 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\demo.js" />
-    <Content Include="app\services\serviceSlike.js" />
     <Content Include="img\logo.png" />
     <Content Include="img\p1.jpg" />
     <Content Include="img\p2.jpg" />
     <Content Include="img\p3.jpg" />
     <Content Include="img\web_kombinuj.jpg" />
     <Content Include="index.html" />
-    <Content Include="prva.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -872,9 +869,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

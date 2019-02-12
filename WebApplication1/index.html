@@ -2,23 +2,296 @@
 <html ng-app="app">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="Scripts/underscore.js"></script>
-    <script src="app/controllers/demo.js"></script>
+  
     <!--<script src="app/services/serviceSlike.js"></script>-->
     <script src="app/app.js"></script>
     <link rel="stylesheet" href="Scripts/StyleSheet1.css" />
+    <style type="text/css">
+
+
+
+        #cssSlider {
+            width: 800px;
+            height: 300px;
+            overflow: hidden;
+          margin-left:-70px;
+            
+        }
+
+        #sliderImages {
+            width: 4000px;
+            height: 300px;
+            overflow: hidden;
+            /* animation duration: 16s : 5x ~3s display image + 5x ~0.2s slide */
+            animation: slide 16s infinite;
+            -moz-animation: slide 16s infinite;
+            -webkit-animation: slide 16s infinite;
+            -o-animation: slide 16s infinite;
+        }
+
+            #sliderImages img {
+                float: left;
+            }
+
+        @keyframes slide {
+            0% {
+                margin-left: 0px;
+            }
+
+            17% {
+                margin-left: 0px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            37% {
+                margin-left: -800px;
+            }
+
+            40% {
+                margin-left: -1600px;
+            }
+
+            57% {
+                margin-left: -1600px;
+            }
+
+            60% {
+                margin-left: -2400px;
+            }
+
+            77% {
+                margin-left: -2400px;
+            }
+
+            80% {
+                margin-left: -3200px;
+            }
+
+            97% {
+                margin-left: -3200px;
+            }
+
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+        @-moz-keyframes slide {
+            0% {
+                margin-left: 0px;
+            }
+
+            17% {
+                margin-left: 0px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            37% {
+                margin-left: -800px;
+            }
+
+            40% {
+                margin-left: -1600px;
+            }
+
+            57% {
+                margin-left: -1600px;
+            }
+
+            60% {
+                margin-left: -2400px;
+            }
+
+            77% {
+                margin-left: -2400px;
+            }
+
+            80% {
+                margin-left: -3200px;
+            }
+
+            100% {
+                margin-left: -3200px;
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                margin-left: 0px;
+            }
+
+            17% {
+                margin-left: 0px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            37% {
+                margin-left: -800px;
+            }
+
+            40% {
+                margin-left: -1600px;
+            }
+
+            57% {
+                margin-left: -1600px;
+            }
+
+            60% {
+                margin-left: -2400px;
+            }
+
+            77% {
+                margin-left: -2400px;
+            }
+
+            80% {
+                margin-left: -3200px;
+            }
+
+            100% {
+                margin-left: -3200px;
+            }
+        }
+
+        @-o-keyframes slide {
+            0% {
+                margin-left: 0px;
+            }
+
+            17% {
+                margin-left: 0px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            37% {
+                margin-left: -800px;
+            }
+
+            40% {
+                margin-left: -1600px;
+            }
+
+            57% {
+                margin-left: -1600px;
+            }
+
+            60% {
+                margin-left: -2400px;
+            }
+
+            77% {
+                margin-left: -2400px;
+            }
+
+            80% {
+                margin-left: -3200px;
+            }
+
+            100% {
+                margin-left: -3200px;
+            }
+        }  
+       
+       
+        
+        
+     .container img {
+            position: relative;
+            float: left;
+            width: 800px;
+            height: 300px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: red;
+        }
+
+    </style>
 </head>
 <body>
-    <tabs>
+    <div id="gornji">
+        <ul>
+            <li>
+                <a href="#" style="color:white;">Prijava</a>
+                <a href="#" style="color:white; background-color:rgb(201,161,24)">Registracija</a>
+            </li>
+        </ul>
+    </div>
+    <div id="nav1">
+        <img src="img/logo.png" />
+        <ul>
+            <li>
+                <a href="#" style="color:rgb(201,161,64);">Sportsko klađenje</a>
+                <a href="#">Klađenje uživo</a>
+                <a href="#">Zlatni  brojevi</a>
+                <a href="#">Casino uživo</a>
+                <a href="#">Casino  igre</a>
+            </li>
+        </ul>
+    </div>
+    <div id="nav2">
+        <ul>
+            <li>
+                <a href="#" style="color:gray;">Ponuda</a>
+                <a href="#" style="color:white;">Klađenje uživo</a>
+                <a href="#" style="color:white;">Rezultati</a>
+                <a href="#" style="color:white;">Statistika</a>
+            </li>
+        </ul>
+        <input type="text" placeholder="Pretraga ponude" style="float:right; padding:7px; margin-top:-49px; margin-right:8%;" />
+
+    </div>
+
+    <div id="lijevi">
+        <img src="img/p1.jpg" /><br />
+        <img src="img/p2.jpg" /><br />
+        <img src="img/p3.jpg" />
+    </div>
+    <div id="root">
+        <div class="container">
+
+            <tabs>
         <pane title="Pluralization">
-            <div ng-controller="BeerCounter">
-                <p>{{message}}</p>
-                <div ng-repeat="banner in banners track by $index">
-                    <img ng-if="banner.Visible" ng-src="{{banner.FullImageUrl}}" />
+            <div ng-controller="kontroler">
+
+                <div id="cssSlider">
+
+                    <div id="sliderImages">
+                      
+                        <div  ng-repeat="banner in testBanners track by $index">
+                            <img ng-src="{{banner.FullImageUrl}}" />
+                        </div>
+                    </div>
+
+
+                    </div>
+
                 </div>
-            </div>
         </pane>
     </tabs>
+
+        </div>
+    </div>
+    <div id="desni">
+        <img src="img/p1.jpg" /><br />
+        <img src="img/p2.jpg" /><br />
+        <img src="img/p3.jpg" />
+    </div>
+
+    
 
 </body>
 </html>
